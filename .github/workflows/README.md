@@ -1,0 +1,8 @@
+# Network Monitor Project 🌐
+
+Монитор сетевого соединения с графическим интерфейсом на Python.
+
+## Установка
+```bash
+pip install -r requirements.txt
+python network_monitor.py
