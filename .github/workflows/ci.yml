@@ -31,3 +31,13 @@ jobs:
       run: |
         echo "🎉 CI/CD Pipeline завершен успешно!"
         ls -la
+
+    - name: 🔍 Code quality check
+      run: |
+        pip install flake8
+        flake8 . --count --max-complexity=10 --statistics
+        
+    - name: 📦 Build package
+      run: |
+        echo "Создаем дистрибутив..."
+        zip -r network_monitor.zip *.py requirements.txt
